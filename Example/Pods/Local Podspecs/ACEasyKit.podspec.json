@@ -1,0 +1,37 @@
+{
+  "name": "ACEasyKit",
+  "version": "1.0.0",
+  "summary": "Simple project kit",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/aclct@icloud.com/ACEasyKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": "aclct@icloud.com",
+  "source": {
+    "git": "https://github.com/aclct@icloud.com/ACEasyKit.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source_files": [
+    "ACEasyKit/Classes/ACUITools/**/*",
+    "ACEasyKit/Classes/ACToast/**/*",
+    "ACEasyKit/Classes/ACAleart/**/*",
+    "ACEasyKit/Classes/ACRouter/**/*",
+    "ACEasyKit/Classes/ACUtils/**/*",
+    "ACEasyKit/Classes/ACBase/**/*",
+    "ACEasyKit/Classes/ACFileTools/**/*",
+    "ACEasyKit/Classes/*.h",
+    "ACEasyKit/Classes/ACSegmentCtrl/**/*"
+  ],
+  "public_header_files": "Pod/Classes/**/*.h",
+  "pod_target_xcconfig": {
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
+  },
+  "user_target_xcconfig": {
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
+  }
+}

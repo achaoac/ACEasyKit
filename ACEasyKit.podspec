@@ -8,35 +8,45 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ACEasyKit'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of ACEasyKit.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.version          = '1.0.0'
+  s.summary          = 'Simple project kit'
+  
+  # This description is used to generate tags and improve search results.
+  #   * Think: What does it do? Why did you write it? What is the focus?
+  #   * Try to keep it short, snappy and to the point.
+  #   * Write the description between the DESC delimiters below.
+  #   * Finally, don't worry about the indent, CocoaPods strips it!
+  
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
-  s.homepage         = 'https://github.com/aclct@icloud.com/ACEasyKit'
+  TODO: Add long description of the pod here.
+  DESC
+  
+  s.homepage         = 'https://github.com/achaoac/ACEasyKit.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'aclct@icloud.com' => 'achaoacwang@tencent.com' }
+  s.author           = 'aclct@icloud.com'
   s.source           = { :git => 'https://github.com/aclct@icloud.com/ACEasyKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '10.0'
-
-  s.source_files = 'ACEasyKit/Classes/**/*'
+  
+  s.ios.deployment_target = '11.0'
+  
+  s.source_files = ['ACEasyKit/Classes/ACUITools/**/*', 'ACEasyKit/Classes/ACToast/**/*', 'ACEasyKit/Classes/ACAleart/**/*', 'ACEasyKit/Classes/ACRouter/**/*', 'ACEasyKit/Classes/ACUtils/**/*', 'ACEasyKit/Classes/ACBase/**/*', 'ACEasyKit/Classes/ACFileTools/**/*', 'ACEasyKit/Classes/*.h', 'ACEasyKit/Classes/ACSegmentCtrl/**/*',]
   
   # s.resource_bundles = {
   #   'ACEasyKit' => ['ACEasyKit/Assets/*.png']
   # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  
+  #  s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  
+  #  ############ 文件夹分组 ############
+  #  # 便捷创建UI工具
+  #  s.subspec 'ACUITools' do |acut|
+  #    acut.source_files = 'ACEasyKit/Classes/ACUITools/**/*'
+  #  end
+  
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  
 end
