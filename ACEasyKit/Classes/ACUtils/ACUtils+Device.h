@@ -12,10 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ACUtils (Device)
 
 // 是否iPad系列设备
-BOOL IsIpadSeries(void);
+BOOL ac_isIpadSeries(void);
 
 // 是否iPhoneX系列设备 包括iphonex/xr/xs/xsmax等带刘海机型
-BOOL IsIphoneXSeries(void);
+BOOL ac_isIphoneXSeries(void);
 
 // 获取设备的 UUID
 NSString * ac_deviceUUID(void);

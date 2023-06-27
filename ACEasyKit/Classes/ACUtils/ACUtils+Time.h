@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ACUtils (Time)
 
 /// 返回当前时间戳（秒）
-int32_t currentTimeInterval(void);
+int32_t ac_currentTimeInterval(void);
 
 @end
 

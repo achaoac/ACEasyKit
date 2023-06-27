@@ -10,7 +10,7 @@
 
 @implementation ACUtils (Device)
 
-BOOL IsIpadSeries(void) {
+BOOL ac_isIpadSeries(void) {
     BOOL rtv = NO;
     NSString *deviceType = [UIDevice currentDevice].model;
     if ([deviceType isEqualToString:@"iPad"]) {
@@ -19,7 +19,7 @@ BOOL IsIpadSeries(void) {
     return rtv;
 }
 
-BOOL IsIphoneXSeries(void) {
+BOOL ac_isIphoneXSeries(void) {
     BOOL rtv = NO;
 //    if (UIDevice.currentDevice.userInterfaceIdiom != UIUserInterfaceIdiomPhone) {
 //        return rtv;

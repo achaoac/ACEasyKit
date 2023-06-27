@@ -9,7 +9,7 @@
 
 @implementation ACUtils (Time)
 
-int32_t currentTimeInterval(void) {
+int32_t ac_currentTimeInterval(void) {
     return [[NSDate date] timeIntervalSince1970];
 }
 
