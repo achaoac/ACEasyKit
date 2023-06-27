@@ -13,10 +13,10 @@
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
-#define TAB_BAR_HEIGHT (IsIphoneXSeries()?83:49)      //49+34---->83
-#define NAVI_BAR_HEIGHT (IsIphoneXSeries()?88:64)     //44+20+24
-#define TAB_BAR_INTERVEL (IsIphoneXSeries()?34:0)     //34
-#define NAVI_BAR_INTERVEL (IsIphoneXSeries()?24:0)    //24
+#define TAB_BAR_HEIGHT (ac_isIphoneXSeries()?83:49)      //49+34---->83
+#define NAVI_BAR_HEIGHT (ac_isIphoneXSeries()?88:64)     //44+20+24
+#define TAB_BAR_INTERVEL (ac_isIphoneXSeries()?34:0)     //34
+#define NAVI_BAR_INTERVEL (ac_isIphoneXSeries()?24:0)    //24
 
 //等比拉伸
 #define Actual_px(x) ((SCREEN_WIDTH/375.0f)*x)    //等比拉伸高度适配
