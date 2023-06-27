@@ -16,14 +16,17 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param block 需要执行的代码块
 void ac_main_async(dispatch_block_t block);
 
+/// 获取app名称
+NSString * ac_appName(void);
+
 /// 获取app版本号
-NSString * appVersion(void);
+NSString * ac_appVersion(void);
 
 /// 获取app Build 号
-NSString * appBuildNumber(void);
+NSString * ac_appBuildNumber(void);
 
 /// 获取app BundleID
-NSString * appBundleIdentifier(void);
+NSString * ac_appBundleIdentifier(void);
 
 /// 将url携带的query参数转化为dictionary
 /// @param url 需要转化的url
@@ -56,8 +59,7 @@ NSString * ac_base64Decode(NSString *string);
 
 /// 将16进制字符串转换为 UIColor
 /// @param hexString 16进制字符串
-UIColor * colorWithHexString(NSString *hexString);
-
+UIColor * ac_colorWithHexString(NSString *hexString);
 
 /// 获得随机字符串
 /// @param length 字符串长度

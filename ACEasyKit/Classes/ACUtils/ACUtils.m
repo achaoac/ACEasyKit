@@ -18,15 +18,19 @@ void ac_main_async(dispatch_block_t block) {
     }
 }
 
-NSString * appVersion(void) {
+NSString * ac_appName(void) {
+    return [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleDisplayName"];
+}
+
+NSString * ac_appVersion(void) {
     return [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleShortVersionString"];
 }
 
-NSString * appBuildNumber(void) {
+NSString * ac_appBuildNumber(void) {
     return [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleVersion"];
 }
 
-NSString * appBundleIdentifier(void) {
+NSString * ac_appBundleIdentifier(void) {
     return [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleIdentifier"];
 }
 
@@ -106,7 +110,7 @@ NSString * ac_base64Decode(NSString *base64String) {
     return decodeStr;
 }
 
-UIColor * colorWithHexString(NSString *hexString) {
+UIColor * ac_colorWithHexString(NSString *hexString) {
     hexString = [[hexString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
     UIColor *defaultColor = [UIColor clearColor];
     if (hexString.length < 6)
